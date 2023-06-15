@@ -1,0 +1,29 @@
+@use '__reset';
+@use '__cardSide';
+@use '__formSide';
+
+
+*{
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+
+body{
+    background-image: url(bg-main-desktop.png);
+    background-repeat: no-repeat;
+    font-size: 18px;
+}
+
+.container{
+    display: flex;
+}
+
+@media screen and (max-width: 800px) {
+    body{
+        background-image: unset;
+        
+    }
+    .container{
+        flex-direction: column;
+    }
+}

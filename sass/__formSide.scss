@@ -1,0 +1,185 @@
+.form__container{
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 30%;
+    
+
+    &-cardHolder{
+        padding: 15px 0;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &-cardNumber{
+        padding: 15px 0;
+        display: flex;
+        flex-direction: column;
+        
+    }
+
+    &-other{
+        padding: 15px 0;
+        display: flex;
+        
+        &-date{
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: space-between;
+
+            & label{
+                padding-top: 8px;
+            }
+
+
+            & div{
+            display: flex;
+            
+            & input{
+
+            width: 40%;
+            margin-right: 10px;
+
+            }
+
+            }
+        }
+
+        &-cvc{
+            width: 100%;
+
+
+            & input{
+                width: 100%;
+            }
+        }
+    }
+}
+
+label{
+    font-size: .5em;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: 5px 0;
+}
+
+input{
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid hsl(279, 6%, 55%);
+    outline: none;
+}
+input:focus{
+
+    border-radius: 5px;
+    background: linear-gradient(#fff, #fff) padding-box, linear-gradient(to left, hsl(249, 99%, 64%),hsl(278, 94%, 30%)) border-box;
+    border: 1px solid transparent;
+}
+
+
+.error{
+    border-color: hsl(0, 100%, 66%);
+}
+
+
+
+button{
+    margin: 15px 0;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    color: hsl(270, 3%, 87%);
+    background-color: hsl(278, 68%, 11%);
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+button:hover{
+    background: linear-gradient(hsl(249, 99%, 64%),hsl(278, 94%, 30%));
+}
+
+.success{
+    padding: 50px;
+    flex-direction: column;
+    justify-content: center;
+    width: 30%;
+    align-items: center;
+    display: none;
+
+    & button{
+        width: 100%;
+        margin-top: 40px;
+    }
+
+    & h3{
+        letter-spacing: 5px;
+        text-transform: uppercase;
+        padding: 25px 0 15px;
+    }
+
+    & p{
+        color: hsl(279, 6%, 55%);
+    }
+}
+.errorFormat::after{
+    content: "Wrong format, numbers only";
+    color: hsl(0, 100%, 66%);
+    font-size: .7em;
+    font-weight: 100;
+}
+.errorNumber::after{
+    content: "Not a valid number";
+    color: hsl(0, 100%, 66%);
+    font-size: .7em;
+    font-weight: 100;
+}
+
+.errorWrong::after{
+    content: "Wrong format";
+    color: hsl(0, 100%, 66%);
+    font-size: .7em;
+    font-weight: 100;
+}
+
+.errorDigits::after{
+    content: "Use 3 digits";
+    color: hsl(0, 100%, 66%);
+    font-size: .7em;
+    font-weight: 100;
+}
+
+.errorEmpty::after{
+    content: "Fill the space";
+    color: hsl(0, 100%, 66%);
+    font-size: .7em;
+    font-weight: 100;
+}
+
+
+
+.displayNone{
+    display: none;
+}
+.displayFlex{
+    display: flex;
+}
+
+@media screen and (max-width: 800px) {
+    .form__container{
+        padding: 100px 50px 0 100px;
+        width: 90%;
+    }
+    .success{
+        padding: 100px 50px 0 100px;
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 8700px){
+    
+}

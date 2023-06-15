@@ -1,0 +1,276 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.card__container {
+  width: 750px;
+  height: 600px;
+  position: relative;
+  color: hsl(270, 3%, 87%);
+}
+.card__container-front {
+  background-image: url(bg-card-front.png);
+  width: 447px;
+  height: 245px;
+  position: absolute;
+  top: 10%;
+  left: 15%;
+  padding: 25px;
+}
+.card__container-front-number {
+  margin-top: 70px;
+  letter-spacing: 4px;
+  padding: 10px;
+}
+.card__container-front-info {
+  display: flex;
+  justify-content: space-between;
+}
+.card__container-front-info-name {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 0.8em;
+  padding: 5px;
+  font-weight: 100;
+}
+.card__container-front-info-date {
+  font-size: 0.8em;
+  padding: 5px;
+  font-weight: 100;
+}
+.card__container-back {
+  background-image: url(bg-card-back.png);
+  width: 447px;
+  height: 245px;
+  position: absolute;
+  top: 55%;
+  left: 25%;
+}
+.card__container-back-number {
+  position: absolute;
+  top: 45%;
+  left: 80%;
+  font-size: 0.8em;
+  color: #fff;
+  letter-spacing: 3px;
+}
+
+@media screen and (max-width: 800px) {
+  .card__container {
+    background-image: url(bg-main-mobile.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 400px;
+  }
+  .card__container-front {
+    top: 55%;
+    left: 15%;
+    z-index: 10;
+  }
+  .card__container-back {
+    top: 20%;
+    left: 28%;
+  }
+}
+@media screen and (max-width: 700px) {
+  .card__container-front {
+    left: 10%;
+  }
+  .card__container-back {
+    left: 23%;
+  }
+}
+@media screen and (max-width: 640px) {
+  .card__container-front {
+    left: 0%;
+  }
+  .card__container-back {
+    left: 13%;
+  }
+}
+.form__container {
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 30%;
+}
+.form__container-cardHolder {
+  padding: 15px 0;
+  display: flex;
+  flex-direction: column;
+}
+.form__container-cardNumber {
+  padding: 15px 0;
+  display: flex;
+  flex-direction: column;
+}
+.form__container-other {
+  padding: 15px 0;
+  display: flex;
+}
+.form__container-other-date {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.form__container-other-date label {
+  padding-top: 8px;
+}
+.form__container-other-date div {
+  display: flex;
+}
+.form__container-other-date div input {
+  width: 40%;
+  margin-right: 10px;
+}
+.form__container-other-cvc {
+  width: 100%;
+}
+.form__container-other-cvc input {
+  width: 100%;
+}
+
+label {
+  font-size: 0.5em;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 1px;
+  padding: 5px 0;
+}
+
+input {
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid hsl(279, 6%, 55%);
+  outline: none;
+}
+
+input:focus {
+  border-radius: 5px;
+  background: linear-gradient(#fff, #fff) padding-box, linear-gradient(to left, hsl(249, 99%, 64%), hsl(278, 94%, 30%)) border-box;
+  border: 1px solid transparent;
+}
+
+.error {
+  border-color: hsl(0, 100%, 66%);
+}
+
+button {
+  margin: 15px 0;
+  height: 40px;
+  border-radius: 5px;
+  border: none;
+  color: hsl(270, 3%, 87%);
+  background-color: hsl(278, 68%, 11%);
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+button:hover {
+  background: linear-gradient(hsl(249, 99%, 64%), hsl(278, 94%, 30%));
+}
+
+.success {
+  padding: 50px;
+  flex-direction: column;
+  justify-content: center;
+  width: 30%;
+  align-items: center;
+  display: none;
+}
+.success button {
+  width: 100%;
+  margin-top: 40px;
+}
+.success h3 {
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  padding: 25px 0 15px;
+}
+.success p {
+  color: hsl(279, 6%, 55%);
+}
+
+.errorFormat::after {
+  content: "Wrong format, numbers only";
+  color: hsl(0, 100%, 66%);
+  font-size: 0.7em;
+  font-weight: 100;
+}
+
+.errorNumber::after {
+  content: "Not a valid number";
+  color: hsl(0, 100%, 66%);
+  font-size: 0.7em;
+  font-weight: 100;
+}
+
+.errorWrong::after {
+  content: "Wrong format";
+  color: hsl(0, 100%, 66%);
+  font-size: 0.7em;
+  font-weight: 100;
+}
+
+.errorDigits::after {
+  content: "Use 3 digits";
+  color: hsl(0, 100%, 66%);
+  font-size: 0.7em;
+  font-weight: 100;
+}
+
+.errorEmpty::after {
+  content: "Fill the space";
+  color: hsl(0, 100%, 66%);
+  font-size: 0.7em;
+  font-weight: 100;
+}
+
+.displayNone {
+  display: none;
+}
+
+.displayFlex {
+  display: flex;
+}
+
+@media screen and (max-width: 800px) {
+  .form__container {
+    padding: 100px 50px 0 100px;
+    width: 90%;
+  }
+  .success {
+    padding: 100px 50px 0 100px;
+    width: 90%;
+  }
+}
+* {
+  font-family: "Space Grotesk", sans-serif;
+}
+
+body {
+  background-image: url(bg-main-desktop.png);
+  background-repeat: no-repeat;
+  font-size: 18px;
+}
+
+.container {
+  display: flex;
+}
+
+@media screen and (max-width: 800px) {
+  body {
+    background-image: unset;
+  }
+  .container {
+    flex-direction: column;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
