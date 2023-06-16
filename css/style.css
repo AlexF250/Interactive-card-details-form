@@ -63,6 +63,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     height: 400px;
+    width: 650px;
   }
   .card__container-front {
     top: 55%;
@@ -242,8 +243,10 @@ button:hover {
 
 @media screen and (max-width: 800px) {
   .form__container {
-    padding: 100px 50px 0 100px;
+    padding: 100px 50px 0 150px;
     width: 90%;
+    justify-content: center;
+    align-self: center;
   }
   .success {
     padding: 100px 50px 0 100px;
@@ -258,6 +261,7 @@ body {
   background-image: url(bg-main-desktop.png);
   background-repeat: no-repeat;
   font-size: 18px;
+  overflow-x: hidden;
 }
 
 .container {
